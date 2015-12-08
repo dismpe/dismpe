@@ -1,0 +1,6 @@
+IE11-Windows6.1-x64-en-us.exe /x:ie11
+extract to directory ie11
+need admin
+
+
+slipstream
