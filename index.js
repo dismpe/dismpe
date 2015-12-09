@@ -262,9 +262,7 @@ let dsimNormalUpdates = function*(options, defaultOption){
   let packagePaths = exports.getWsusPackagePaths(options, defaultOption);
   console.log(packagePaths);
   for (let packagePath of packagePaths) {
-    let packageOption = cloneOption(defaultOption)
-    packageOption.cwd = path.dirname(packagePath);
-    yield process.exec(`Dism.exe /image:${options.mountDir} /Add-Package "/PackagePath:${path.basename(packagePath)}"`, packageOption)
+    yield process.exec(`Dism.exe /image:${options.mountDir} /Add-Package "/PackagePath:${packagePath}"`, defaultOption)
   }
 } 
 
