@@ -1,0 +1,16 @@
+{
+  "name": "win-dism",
+  "version": "1.0.0",
+  "description": "Creating ISO for win7 with patches",
+  "main": "index.js",
+  "dependencies": {
+    "fs-extra": "^0.26.2",
+    "spawn-js": "^0.0.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
