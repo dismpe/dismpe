@@ -206,7 +206,7 @@ exports.getWHDownloaderPackagePaths = function(options){
 
 let extractFile = (file, defaultOption) => {
   let targetPath = path.dirname(path.dirname(file.targetPath))
-  file.extractPath = path.join(targetPath, file.id  +  '.x');
+  file.extractPath = path.join(targetPath, 'x' + file.id);
   fs.removeSync(file.extractPath);
   return process.exec(`"${file.targetPath}" -x:${file.extractPath} -q`, defaultOption)
 }
@@ -321,7 +321,7 @@ exports.getWsusPackagePaths = function*(options, defaultOption) {
     }
   }
 
-  return packagePaths;
+  return packagePaths.map((p)=>path.relative(options.rootDir, p));
 }
 
 exports.start = (options)=>{
@@ -383,7 +383,7 @@ exports.start = (options)=>{
     if (options.addPackage) {
       let packagePaths = [];
       if (options.udpateType === 'WHDownloader') {
-        let whdPackagePaths = exports.getWHDownloaderPackagePaths(options);
+        packagePaths = exports.getWHDownloaderPackagePaths(options);
       } if (options.udpateType === 'wsusoffline') {
         packagePaths = yield* exports.getWsusPackagePaths(options, defaultOption);
       }

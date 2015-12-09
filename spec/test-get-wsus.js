@@ -19,6 +19,7 @@ describe('dsimpe#', function(){
   it('getWsusPackagePaths Should return the correct package list', function*(){
     this.timeout(10000);
     const packageList = yield* getWsusPackagePaths(options);
+    expect(packageList[0]).to.equal('wsusoffline\\client\\w61-x64\\x217');
     expect(packageList.length).to.equal(192);
   })
   let getNotFiltered = (ids, packageList)=>{

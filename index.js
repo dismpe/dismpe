@@ -1,4 +1,6 @@
-const start = require('./src/dsimpe.js');
+'use strict';
+
+const start = require('./src/dsimpe.js').start;
 
 let options = {
   rootDir: __dirname,
