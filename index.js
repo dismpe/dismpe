@@ -18,6 +18,45 @@ let getDevice = ()=>{
   return finalDevice;
 }
 
+const EXCLUDS_FOR_WIN7 = [
+  '2483614', // not affected on Win7 Sp1
+  '2518295', // not affected on Win7 Sp1
+  '2533552', // only online
+  '2535512', // not affected on Win7 Sp1
+  '2546250', // not affected on Win7 Sp1
+  '2571621', // not affected on Win7 Sp1
+  '2604114', // .NET related
+  '2637518', // .NET related
+  '2656355', // .NET related
+
+  // superseded
+  '2656410',
+  '2729451',
+  '2736418',
+  '2742598',
+  '2756920',
+  '2789644',
+  '2790978',
+  '2843638',
+
+  '2853587', //AD_LDS updates, should be installed separately
+
+  //extra
+  '2868846',
+  '2928120', // RSAT
+
+  '2984976', // not test yet
+  '3020387',
+  '3042058',
+  '3046339',
+  '3062577',
+  '3069762',
+  '3075222',
+  '3100465',
+  '3108604',
+  '3108669',
+]
+
 // 更新 次序
 // WindowsUpdateAgent-7.6-x64:
 //just integrate WUClient-SelfUpdate-ActiveX, WUClient-SelfUpdate-Aux-TopLevel and WUClient-SelfUpdate-Core-TopLevel from Win7SP1 .exe...
@@ -47,6 +86,55 @@ const IE_PACKAGE_PREFIEXES = [
   'IE-Spelling-',
   'IE-Hyphenation-',
 ];
+
+`
+
+:: Additional Features
+Dism.exe /image:%MOUNT% /Add-Package /PackagePath:%UPDATE_DIR%\Additional\Features\IIS
+Dism.exe /image:%MOUNT% /Add-Package /PackagePath:%UPDATE_DIR%\Additional\Features\LPRPortMonitor
+Dism.exe /image:%MOUNT% /Add-Package /PackagePath:%UPDATE_DIR%\Additional\Features\MSMQ
+Dism.exe /image:%MOUNT% /Add-Package /PackagePath:%UPDATE_DIR%\Additional\Features\NFS
+Dism.exe /image:%MOUNT% /Add-Package /PackagePath:%UPDATE_DIR%\Additional\Features\SNMP
+Dism.exe /image:%MOUNT% /Add-Package /PackagePath:%UPDATE_DIR%\Additional\Features\SUA
+Dism.exe /image:%MOUNT% /Add-Package /PackagePath:%UPDATE_DIR%\Additional\Features\TelnetServer
+
+::Windows Activation Technologies(WAT)
+Dism.exe /image:%MOUNT% /Add-Package /PackagePath:%UPDATE_DIR%\Additional\WAT
+
+::Remove Additional\WMF4.0 This is powershell that need .NET 4.5 and that can not be integrate into install.wim
+
+:: Extra updates
+Dism.exe /image:%MOUNT% /Add-Package /PackagePath:%UPDATE_DIR%\Extra\AD_LDS
+Dism.exe /image:%MOUNT% /Add-Package /PackagePath:%UPDATE_DIR%\Extra\AD_LDS\Updates
+::Remove Extra\Addons\DA2.0 Don't know what's this
+::Remove Extra\Addons\FM.API The FM.API lost a xml file
+::Remove Extra\Addons\MicrosoftAgent outdate thing
+
+:: Windows NT Backup Restore Utility
+Dism.exe /image:%MOUNT% /Add-Package /PackagePath:%UPDATE_DIR%\Extra\Addons\NTBackup_en-us
+
+:: WIF have order problem
+Dism.exe /image:%MOUNT% /Add-Package /PackagePath:%UPDATE_DIR%\Extra\Addons\WIF\Windows6.1-KB974405-x64.msu
+Dism.exe /image:%MOUNT% /Add-Package /PackagePath:%UPDATE_DIR%\Extra\Addons\WIF\Windows6.1-KB2503351-x64.msu
+
+Dism.exe /image:%MOUNT% /Add-Package /PackagePath:%UPDATE_DIR%\Extra\Addons\WorkFolders
+Dism.exe /image:%MOUNT% /Add-Package /PackagePath:%UPDATE_DIR%\Extra\MediaFeaturePack
+Dism.exe /image:%MOUNT% /Add-Package /PackagePath:%UPDATE_DIR%\Extra\MediaFormatFeaturePack
+Dism.exe /image:%MOUNT% /Add-Package /PackagePath:%UPDATE_DIR%\Extra\RSAT
+Dism.exe /image:%MOUNT% /Add-Package /PackagePath:%UPDATE_DIR%\Extra\RSAT\WMS
+Dism.exe /image:%MOUNT% /Add-Package /PackagePath:%UPDATE_DIR%\Extra\RSAT\Updates
+
+::Remove Extra\SL
+::Remove Extra\VirtualPC
+::Remove Extra\WithoutPlatform
+::Remove Extra\WMF3.0 We have WMF 4.0 in Additional, besides, it need .NET
+::Remove Extra\WUClient Already have
+
+:: Drivers
+Dism /image:%MOUNT% /Add-Driver /Driver:"%DRIVER_DIR%" /recurse
+
+`
+
 
 let cloneOption= (option) => {
   return JSON.parse(JSON.stringify(option));
@@ -170,6 +258,9 @@ let dsimNormalUpdates = function*(wsusClient, defaultOption, options){
 
     let packagePaths = []
     for (let file of files) {
+      if (EXCLUDS_FOR_WIN7.indexOf(file.kbPart.substring(2)) >= 0){
+        continue;
+      }
       if (file.pathKey === 'ie') { // There are other languages need to be excluded
         if (file.packagePaths) {
           Array.prototype.push.apply(packagePaths, file.packagePaths);

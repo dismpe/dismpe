@@ -1,0 +1,10 @@
+vcredist2005_x64.exe /Q
+vcredist2005_x86.exe /Q
+vcredist2008_x64.exe /q
+vcredist2008_x86.exe /q
+vcredist2010_x64.exe /q /norestart
+vcredist2010_x86.exe /q /norestart
+vcredist2012_x64.exe /quiet /norestart
+vcredist2012_x86.exe /quiet /norestart
+vcredist2013_x64.exe /quiet /norestart
+vcredist2013_x86.exe /quiet /norestart
