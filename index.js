@@ -41,7 +41,9 @@ const IE_PREFIXES = [
 
 const IE_PACKAGE_PREFIEXES = [
   'IE-Win7.CAB',
-  'IE_SUPPORT_',
+  // Accoding to http://iboyd.net/index.php/2013/01/04/applying-kb2506143-to-an-offline-windows-7-sp1-wim-windows-setup-fail/
+  //IE_SUPPORT_amd64_en-US should be deleted
+  //'IE_SUPPORT_',
   'IE-Spelling-',
   'IE-Hyphenation-',
 ];
@@ -68,10 +70,20 @@ let dsimNormalUpdates = function*(wsusClient, defaultOption, options){
   let id = 0;
   let files = filenames.map((filename)=>{
     let filePath = path.join(glbPath, filename)
+    let filenameParts = filename.split('-');
+    let kbPart = 'kb0000000'
+    for (let part of filenameParts) {
+      part = part.toLowerCase();
+      if (part.length === 'kb2518295'.length && part.startsWith('kb')) {
+        kbPart = part;
+        break;
+      }
+    }
     let value = {
       id: id.toString(),
       filename: filename,
       filePath: filePath,
+      kbPart: kbPart,
       stat: fs.statSync(filePath)
     };
     id = id + 1;
@@ -118,11 +130,14 @@ let dsimNormalUpdates = function*(wsusClient, defaultOption, options){
 
     file.pathKey = pathKey;
     file.tmpPath = tmpPaths[pathKey]
+    file.targetPath = file.filePath;
+    /*
     file.targetPath = path.join(file.tmpPath, file.filename);
     if (fs.existsSync(file.targetPath)){
       fs.removeSync(file.targetPath);
     }
     fs.renameSync(file.filePath, file.targetPath);
+    */
   }
 
   try {
@@ -131,12 +146,12 @@ let dsimNormalUpdates = function*(wsusClient, defaultOption, options){
       id: id.toString(),
       targetPath: path.join(WindowsUpdateAgentFile.extractPath, 'WUA-Win7SP1.exe')
     }
-    // Need exclude WindowsUpdateAgentFile
-    // cause it's timestamp is very new
-    WindowsUpdateAgentFile.extractPath = null;
+    WindowsUpdateAgentFile.extractPath = wuaWin7Sp1File.extractPath;
+
     yield extractFile(wuaWin7Sp1File, defaultOption);
 
     yield extractFile(ieFile, defaultOption);
+    ieFile.kbPart = 'kb2841134';
     ieFile.packagePaths = [];
     let ieFilenames =  fs.readdirSync(ieFile.extractPath)
     for (let packagePrefix of IE_PACKAGE_PREFIEXES) {
@@ -148,16 +163,17 @@ let dsimNormalUpdates = function*(wsusClient, defaultOption, options){
     }
 
     files.sort((a, b)=>{
-      return a.stat.mtime.getTime() - b.stat.mtime.getTime();
+      return a.kbPart.localeCompare(b.kbPart)
+      //a.mtime.getTime() - b.stat.mtime.getTime();
     });
 
-    let packagePaths = [wuaWin7Sp1File.extractPath]
+    let packagePaths = []
     for (let file of files) {
       if (file.pathKey === 'ie') { // There are other languages need to be excluded
         if (file.packagePaths) {
           Array.prototype.push.apply(packagePaths, file.packagePaths);
-        }
-        if (file.extractPath) {
+        } else  if (file.extractPath) {
+          packagePaths.push(file.extractPath);
         }
       } else {
         packagePaths.push(file.targetPath)
@@ -168,7 +184,6 @@ let dsimNormalUpdates = function*(wsusClient, defaultOption, options){
     for (let packagePath of packagePaths) {
       let packageOption = cloneOption(defaultOption)
       packageOption.cwd = path.dirname(packagePath);
-      console.log(packageOption)
       yield process.exec(`Dism.exe /image:${options.mountDir} /Add-Package "/PackagePath:${path.basename(packagePath)}"`, packageOption)
     }
   } finally {
@@ -225,18 +240,17 @@ let start = (options)=>{
         needMount = true;
       }
     }
-    
+
     if (needMount) {
       fs.mkdirsSync(mountPath);
       if (!fs.existsSync(wimFilepath)){
         fs.copySync(installWinPath, wimFilepath);
-        let stat = fs.statSync(wimFilepath);
-        fs.chmodSync(wimFilepath, 666)
-        fs.utimesSync(wimFilepath, stat.atime, stat.mtime);
       }
+      let stat = fs.statSync(installWinPath);
+      fs.chmodSync(wimFilepath, 666)
       yield process.exec(`Dism.exe /Mount-Wim /WimFile:${wimFilepath} /Index:4 /MountDir:${options.mountDir}`, defaultOption);
+      fs.utimesSync(wimFilepath, stat.atime, stat.mtime);
     }
-
 
     let wsusClient = `wsusoffline\\client`
     if (options.addPackage) {
