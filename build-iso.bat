@@ -38,7 +38,7 @@ echo Start creating the iso
 call :GetLabel %SRC_ISO% SRC_ISO_LABEL
 echo %SRC_ISO_LABEL%
 
-oscdimg -t%ISO_TIME% -o "-l%SRC_ISO_LABEL%" -g -d -n -m -b"%TARGET_ISO%\boot\etfsboot.com" %TARGET_ISO% %TARGET_ISO%\..\final.iso
+oscdimg -u2 -o -g -m -t%ISO_TIME% "-l%SRC_ISO_LABEL%" -b"%TARGET_ISO%\boot\etfsboot.com" %TARGET_ISO% %TARGET_ISO%\..\final.iso
 
 goto :eof
 
