@@ -38,7 +38,8 @@ echo Start creating the iso
 call :GetLabel %SRC_ISO% SRC_ISO_LABEL
 echo %SRC_ISO_LABEL%
 
-oscdimg -u2 -o -g -m -t%ISO_TIME% "-l%SRC_ISO_LABEL%" -b"%TARGET_ISO%\boot\etfsboot.com" %TARGET_ISO% %TARGET_ISO%\..\final.iso
+set BOOT_DATA=-u2 -udfver102 "-bootdata:2#p0,e,b%TARGET_ISO%\boot\etfsboot.com#pEF,e,b%TARGET_ISO%\efi\microsoft\boot\efisys.bin"
+oscdimg -o -g -m -t%ISO_TIME% -l%SRC_ISO_LABEL% %BOOT_DATA% %TARGET_ISO% %TARGET_ISO%\..\final.iso
 
 goto :eof
 
