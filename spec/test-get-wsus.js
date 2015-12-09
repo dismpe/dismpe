@@ -18,7 +18,7 @@ describe('index#getWsusPackagePaths', function(){
   }
   it('Should return the correct package list', function*(){
     this.timeout(10000);
-    const packageList = yield getWsusPackagePaths(options);
+    const packageList = yield* getWsusPackagePaths(options);
     expect(packageList.length).to.equal(192);
   })
   let getNotFiltered = (ids, packageList)=>{
@@ -35,7 +35,7 @@ describe('index#getWsusPackagePaths', function(){
   it('Testing the exclude works', function*(){
     this.timeout(10000);
     expect(EXCLUDS_FOR_WIN7.indexOf('2506014')).to.equal(-1);
-    const packageList = yield getWsusPackagePaths(options);
+    const packageList = yield* getWsusPackagePaths(options);
     let notFiltered = getNotFiltered(['2506014'], packageList)
     expect(notFiltered).to.eql(['2506014']);
     notFiltered = getNotFiltered(EXCLUDS_FOR_WIN7, packageList)

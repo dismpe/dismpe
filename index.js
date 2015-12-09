@@ -258,14 +258,6 @@ exports.getWsusPackagePaths = function*(options, defaultOption) {
   return packagePaths;
 }
 
-let dsimNormalUpdates = function*(options, defaultOption){
-  let packagePaths = exports.getWsusPackagePaths(options, defaultOption);
-  console.log(packagePaths);
-  for (let packagePath of packagePaths) {
-    yield process.exec(`Dism.exe /image:${options.mountDir} /Add-Package "/PackagePath:${packagePath}"`, defaultOption)
-  }
-} 
-
 let start = (options)=>{
   spawn(function*(){
     let ret;
@@ -323,7 +315,11 @@ let start = (options)=>{
     }
 
     if (options.addPackage) {
-      yield* dsimNormalUpdates(options, defaultOption);
+      let packagePaths = yield* exports.getWsusPackagePaths(options, defaultOption);
+      console.log(packagePaths);
+      for (let packagePath of packagePaths) {
+        yield process.exec(`Dism.exe /image:${options.mountDir} /Add-Package "/PackagePath:${packagePath}"`, defaultOption)
+      }
     }
     if (options.commit) {
       yield process.exec(`Dism.exe /Unmount-Wim /MountDir:${options.mountDir} /commit`, defaultOption)
