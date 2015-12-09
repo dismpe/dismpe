@@ -206,6 +206,7 @@ let start = (options)=>{
     let mountPath = path.join(options.mountDir)
     let needMount = true;
 
+    const installWinPath = `${osDevice}\\sources\\install.wim`;
     const wimFilepath = path.join(options.wimDir, 'install.wim')
     if (fs.existsSync(mountPath)){
       needMount = false;
@@ -213,14 +214,17 @@ let start = (options)=>{
         yield process.exec(`Dism.exe /Unmount-Wim /discard /MountDir:${options.mountDir}`, defaultOption);
         fs.removeSync(mountPath);
         if (fs.existsSync(wimFilepath)) {
-          fs.removeSync(wimFilepath);
+          let mtimeA = fs.statSync(wimFilepath).mtime;
+          let mtimeB = fs.statSync(installWinPath).mtime;
+          if (mtimeA.getTime() != mtimeB.getTime()){
+            fs.removeSync(wimFilepath);
+          }
         }
         needMount = true;
       }
     }
     
     if (needMount) {
-      let installWinPath = `${osDevice}\\sources\\install.wim`;
       fs.mkdirsSync(mountPath);
       if (!fs.existsSync(wimFilepath)){
         fs.copySync(installWinPath, wimFilepath);
