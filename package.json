@@ -1,5 +1,5 @@
 {
-  "name": "win-dism",
+  "name": "dismpe",
   "version": "1.0.0",
   "description": "Creating ISO for win7 with patches",
   "main": "index.js",
@@ -7,7 +7,16 @@
     "fs-extra": "^0.26.2",
     "spawn-js": "^0.0.1"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "chai": "^3.4.1",
+    "co-mocha": "^1.1.2",
+    "gulp": "^3.9.0",
+    "gulp-jshint": "^2.0.0",
+    "gulp-mocha": "^2.2.0",
+    "gulp-mocha-co": "^0.4.1-co.3",
+    "jshint": "^2.8.0",
+    "mocha": "^2.3.4"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

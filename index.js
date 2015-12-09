@@ -57,6 +57,8 @@ const EXCLUDS_FOR_WIN7 = [
   '3108669',
 ]
 
+exports.EXCLUDS_FOR_WIN7 = EXCLUDS_FOR_WIN7;
+
 // 更新 次序
 // WindowsUpdateAgent-7.6-x64:
 //just integrate WUClient-SelfUpdate-ActiveX, WUClient-SelfUpdate-Aux-TopLevel and WUClient-SelfUpdate-Core-TopLevel from Win7SP1 .exe...
@@ -147,7 +149,9 @@ let extractFile = (file, defaultOption) => {
   return process.exec(`"${file.targetPath}" -x:${file.extractPath} -q`, defaultOption)
 }
 
-let dsimNormalUpdates = function*(wsusClient, defaultOption, options){
+exports.getWsusPackagePaths = function*(options, defaultOption) {
+  let wsusClient = `wsusoffline\\client`
+
   let w61 = `${wsusClient}\\w61`
   if (options.arch !== 'x86') {
     w61 = `${wsusClient}\\w61-${options.arch}`
@@ -180,14 +184,6 @@ let dsimNormalUpdates = function*(wsusClient, defaultOption, options){
     return value;
   });
 
-  const tmpPaths = {
-    ie: path.join(options.rootDir, w61, 'ie-tmp'),
-    beforeIE: path.join(options.rootDir, w61, 'before-ie-tmp'),
-    afterIE: path.join(options.rootDir, w61, 'after-ie-tmp'),
-  }
-  for (let k in tmpPaths) {
-    fs.mkdirsSync(tmpPaths[k])
-  }
   const ieFilename = `IE11-Windows6.1-${options.arch}-${options.ieLang}.exe`.toLowerCase()
   const ieFile = filenameMap.get(ieFilename);
   let WindowsUpdateAgentFile = null;
@@ -218,73 +214,63 @@ let dsimNormalUpdates = function*(wsusClient, defaultOption, options){
     }
 
     file.pathKey = pathKey;
-    file.tmpPath = tmpPaths[pathKey]
     file.targetPath = file.filePath;
-    /*
-    file.targetPath = path.join(file.tmpPath, file.filename);
-    if (fs.existsSync(file.targetPath)){
-      fs.removeSync(file.targetPath);
-    }
-    fs.renameSync(file.filePath, file.targetPath);
-    */
   }
 
-  try {
-    yield extractFile(WindowsUpdateAgentFile, defaultOption);
-    let wuaWin7Sp1File = {
-      id: id.toString(),
-      targetPath: path.join(WindowsUpdateAgentFile.extractPath, 'WUA-Win7SP1.exe')
-    }
+  yield extractFile(WindowsUpdateAgentFile, defaultOption);
+  let wuaWin7Sp1File = {
+    id: id.toString(),
+    targetPath: path.join(WindowsUpdateAgentFile.extractPath, 'WUA-Win7SP1.exe')
+  }
 
-    yield extractFile(wuaWin7Sp1File, defaultOption);
-    WindowsUpdateAgentFile.extractPath = wuaWin7Sp1File.extractPath;
+  yield extractFile(wuaWin7Sp1File, defaultOption);
+  WindowsUpdateAgentFile.extractPath = wuaWin7Sp1File.extractPath;
 
-    yield extractFile(ieFile, defaultOption);
-    ieFile.kbPart = 'kb2841134';
-    ieFile.packagePaths = [];
-    let ieFilenames =  fs.readdirSync(ieFile.extractPath)
-    for (let packagePrefix of IE_PACKAGE_PREFIEXES) {
-      for (let filename of ieFilenames) {
-        if (filename.toLowerCase().startsWith(packagePrefix.toLowerCase())) {
-          ieFile.packagePaths.push(path.join(ieFile.extractPath, filename))
-        }
+  yield extractFile(ieFile, defaultOption);
+  ieFile.kbPart = 'kb2841134';
+  ieFile.packagePaths = [];
+  let ieFilenames =  fs.readdirSync(ieFile.extractPath)
+  for (let packagePrefix of IE_PACKAGE_PREFIEXES) {
+    for (let filename of ieFilenames) {
+      if (filename.toLowerCase().startsWith(packagePrefix.toLowerCase())) {
+        ieFile.packagePaths.push(path.join(ieFile.extractPath, filename))
       }
-    }
-
-    files.sort((a, b)=>{
-      return a.kbPart.localeCompare(b.kbPart)
-      //a.mtime.getTime() - b.stat.mtime.getTime();
-    });
-
-    let packagePaths = []
-    for (let file of files) {
-      if (EXCLUDS_FOR_WIN7.indexOf(file.kbPart.substring(2)) >= 0){
-        continue;
-      }
-      if (file.pathKey === 'ie') { // There are other languages need to be excluded
-        if (file.packagePaths) {
-          Array.prototype.push.apply(packagePaths, file.packagePaths);
-        } else if (file.extractPath) {
-          packagePaths.push(file.extractPath);
-        }
-      } else {
-        packagePaths.push(file.targetPath)
-      }
-    }
-
-    console.log(packagePaths);
-    for (let packagePath of packagePaths) {
-      let packageOption = cloneOption(defaultOption)
-      packageOption.cwd = path.dirname(packagePath);
-      yield process.exec(`Dism.exe /image:${options.mountDir} /Add-Package "/PackagePath:${path.basename(packagePath)}"`, packageOption)
-    }
-  } finally {
-    for (let file of files) {
-      fs.renameSync(file.targetPath, file.filePath);
     }
   }
+
+  files.sort((a, b)=>{
+    return a.kbPart.localeCompare(b.kbPart)
+    //a.mtime.getTime() - b.stat.mtime.getTime();
+  });
+
+  let packagePaths = []
+  for (let file of files) {
+    if (EXCLUDS_FOR_WIN7.indexOf(file.kbPart.substring(2)) >= 0){
+      continue;
+    }
+    if (file.pathKey === 'ie') { // There are other languages need to be excluded
+      if (file.packagePaths) {
+        Array.prototype.push.apply(packagePaths, file.packagePaths);
+      } else if (file.extractPath) {
+        packagePaths.push(file.extractPath);
+      }
+    } else {
+      packagePaths.push(file.targetPath)
+    }
+  }
+
+  return packagePaths;
 }
 
+let dsimNormalUpdates = function*(options, defaultOption){
+  let packagePaths = exports.getWsusPackagePaths(options, defaultOption);
+  console.log(packagePaths);
+  for (let packagePath of packagePaths) {
+    let packageOption = cloneOption(defaultOption)
+    packageOption.cwd = path.dirname(packagePath);
+    yield process.exec(`Dism.exe /image:${options.mountDir} /Add-Package "/PackagePath:${path.basename(packagePath)}"`, packageOption)
+  }
+} 
 
 let start = (options)=>{
   spawn(function*(){
@@ -321,8 +307,6 @@ let start = (options)=>{
         yield process.exec(`Dism.exe /Unmount-Wim /discard /MountDir:${options.mountDir}`, defaultOption);
         fs.removeSync(mountPath);
         if (fs.existsSync(wimFilepath)) {
-          //TODO: use mtime is not accurate , cause fs.chmodSync
-          // would change mtime
           let mtimeA = fs.statSync(wimFilepath).mtime;
           let mtimeB = fs.statSync(installWinPath).mtime;
           if (mtimeA.getTime() != mtimeB.getTime()){
@@ -344,9 +328,8 @@ let start = (options)=>{
       fs.utimesSync(wimFilepath, stat.atime, stat.mtime);
     }
 
-    let wsusClient = `wsusoffline\\client`
     if (options.addPackage) {
-      yield* dsimNormalUpdates(wsusClient, defaultOption, options);
+      yield* dsimNormalUpdates(options, defaultOption);
     }
     if (options.commit) {
       yield process.exec(`Dism.exe /Unmount-Wim /MountDir:${options.mountDir} /commit`, defaultOption)
