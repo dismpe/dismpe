@@ -32,15 +32,8 @@ IMAGEX /COMPRESS maximum /EXPORT %SRC_WIM% 4 %TARGET_ISO%\sources\install.wim
 
 :: http://finalthought.org/creating-customized-windows-8-1-media-iso-wim-flash-drive-part-2/ Win8
 ::https://technet.microsoft.com/en-us/library/cc749036(v=ws.10).aspx
-@echo on
 
-for /f "tokens=1-5*" %%1 in ('vol') do (
-   set vol=%%6 & goto done
-)
-:done
-echo %vol%
-echo start creating the iso
-call %~dp0get-label.bat %SRC_ISO%
+echo Start creating the iso
 
 call :GetLabel %SRC_ISO% SRC_ISO_LABEL
 echo %SRC_ISO_LABEL%
