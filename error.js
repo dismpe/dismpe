@@ -1037,7 +1037,7 @@ Version: 6.1.7600.16385
 
 Image Version: 6.1.7600.16385
 
-Processing 1 of 1 - Adding package E:\����\CI-Tools\Install\OS\wsusoffline\client\w61-x64\\IE-Hyphenation-en.MSU
+Processing 1 of 1 - Adding package E:\����\CI-Tools\Install\OS\wsusoffline\client\w61-x64\IE-Hyphenation-en.MSU
 The operation completed successfully.
 
 
@@ -1491,6 +1491,1069 @@ The operation completed successfully.
 
 
 Dism.exe /image:D:/Win7.1/mount /Add-Package "/PackagePath:windows6.1-kb2973201-x64_b7cd3ef634a5e9b9a8e98f7aff7a0217777141b0.cab"
+
+Deployment Image Servicing and Management tool
+Version: 6.1.7600.16385
+
+Image Version: 6.1.7600.16385
+
+Processing 1 of 1 - Adding package Package_for_KB2973201~31bf3856ad364e35~amd64~~6.1.1.2
+The operation completed successfully.
+
+
+Dism.exe /image:D:/Win7.1/mount /Add-Package "/PackagePath:windows6.1-kb2973351-x64_69e386b2997576d366447f5f6a4f64cef793dd89.cab"
+
+Deployment Image Servicing and Management tool
+Version: 6.1.7600.16385
+
+Image Version: 6.1.7600.16385
+
+Processing 1 of 1 - Adding package Package_for_KB2973351~31bf3856ad364e35~amd64~~6.1.1.1
+The operation completed successfully.
+
+
+Dism.exe /image:D:/Win7.1/mount /Add-Package "/PackagePath:windows6.1-kb2976897-x64_47104006ce87e39d2534e47b0bd6abcb044ecdf3.cab"
+
+Deployment Image Servicing and Management tool
+Version: 6.1.7600.16385
+
+Image Version: 6.1.7600.16385
+
+Processing 1 of 1 - Adding package Package_for_KB2976897~31bf3856ad364e35~amd64~~6.1.1.0
+The operation completed successfully.
+
+
+Dism.exe /image:D:/Win7.1/mount /Add-Package "/PackagePath:windows6.1-kb2977292-x64_e9bd5c5c5b86387a137e6e2a5cc830344d75b60e.cab"
+
+Deployment Image Servicing and Management tool
+Version: 6.1.7600.16385
+
+Image Version: 6.1.7600.16385
+
+Processing 1 of 1 - Adding package Package_for_KB2977292~31bf3856ad364e35~amd64~~6.1.1.0
+The operation completed successfully.
+
+
+Dism.exe /image:D:/Win7.1/mount /Add-Package "/PackagePath:windows6.1-kb2978120-x64_7716abb2e522eeb6511c71d5aac19d692550f43b.cab"
+
+Deployment Image Servicing and Management tool
+Version: 6.1.7600.16385
+
+Image Version: 6.1.7600.16385
+
+Processing 1 of 1 - Adding package Package_for_KB2978120~31bf3856ad364e35~amd64~~6.1.1.0
+The operation completed successfully.
+
+
+Dism.exe /image:D:/Win7.1/mount /Add-Package "/PackagePath:windows6.1-kb2978742-x64_37a0a0770f629c43a3649dd79ab92654abff1293.cab"
+
+Deployment Image Servicing and Management tool
+Version: 6.1.7600.16385
+
+Image Version: 6.1.7600.16385
+
+Processing 1 of 1 - Adding package Package_for_KB2978742~31bf3856ad364e35~amd64~~6.1.1.0
+The operation completed successfully.
+
+
+Dism.exe /image:D:/Win7.1/mount /Add-Package "/PackagePath:windows6.1-kb2981580-x64_6a7f92da16676c89b44e102a1979b1870bd3db35.cab"
+
+Deployment Image Servicing and Management tool
+Version: 6.1.7600.16385
+
+Image Version: 6.1.7600.16385
+
+Processing 1 of 1 - Adding package Package_for_KB2981580~31bf3856ad364e35~amd64~~6.1.1.2
+The operation completed successfully.
+
+
+Dism.exe /image:D:/Win7.1/mount /Add-Package "/PackagePath:windows6.1-kb2984972-x64_289d1811c5b2a236f3b6c666d0ccb3b3106301b4.cab"
+
+Deployment Image Servicing and Management tool
+Version: 6.1.7600.16385
+
+Image Version: 6.1.7600.16385
+
+Processing 1 of 1 - Adding package Package_for_KB2984972~31bf3856ad364e35~amd64~~6.1.1.4
+The operation completed successfully.
+
+
+Dism.exe /image:D:/Win7.1/mount /Add-Package "/PackagePath:windows6.1-kb2984976-x64_ac83e96da53ec3b3ae7e67599c8ea8bfc65fb6de.cab"
+
+Deployment Image Servicing and Management tool
+Version: 6.1.7600.16385
+
+Image Version: 6.1.7600.16385
+
+Processing 1 of 1 - Adding package Package_for_KB2984976~31bf3856ad364e35~amd64~~6.1.1.3
+The operation completed successfully.
+
+
+Dism.exe /image:D:/Win7.1/mount /Add-Package "/PackagePath:windows6.1-kb2991963-x64_082b99d8dae9b0f5b41297b4443a9daca105c7c8.cab"
+
+Deployment Image Servicing and Management tool
+Version: 6.1.7600.16385
+
+Image Version: 6.1.7600.16385
+
+Processing 1 of 1 - Adding package Package_for_KB2991963~31bf3856ad364e35~amd64~~6.1.1.0
+The operation completed successfully.
+
+
+Dism.exe /image:D:/Win7.1/mount /Add-Package "/PackagePath:windows6.1-kb2992611-x64_ac23b51370054518618391b76401bf97aa58a670.cab"
+
+Deployment Image Servicing and Management tool
+Version: 6.1.7600.16385
+
+Image Version: 6.1.7600.16385
+
+Processing 1 of 1 - Adding package Package_for_KB2992611~31bf3856ad364e35~amd64~~6.1.1.0
+The operation completed successfully.
+
+
+Dism.exe /image:D:/Win7.1/mount /Add-Package "/PackagePath:windows6.1-kb2993651-x64_06840603b0e19aa7ae59098d3e7c07138b03a0aa.cab"
+
+Deployment Image Servicing and Management tool
+Version: 6.1.7600.16385
+
+Image Version: 6.1.7600.16385
+
+Processing 1 of 1 - Adding package Package_for_KB2993651~31bf3856ad364e35~amd64~~6.1.1.3
+The operation completed successfully.
+
+
+Dism.exe /image:D:/Win7.1/mount /Add-Package "/PackagePath:windows6.1-kb3000483-x64_1a1352d47233733e0652f1a2998c3f66f3727a7b.cab"
+
+Deployment Image Servicing and Management tool
+Version: 6.1.7600.16385
+
+Image Version: 6.1.7600.16385
+
+Processing 1 of 1 - Adding package Package_for_KB3000483~31bf3856ad364e35~amd64~~6.1.1.5
+The operation completed successfully.
+
+
+Dism.exe /image:D:/Win7.1/mount /Add-Package "/PackagePath:windows6.1-kb3003743-x64_7b2bfcbba9ee00e54d485e9661e5a1683bb85561.cab"
+
+Deployment Image Servicing and Management tool
+Version: 6.1.7600.16385
+
+Image Version: 6.1.7600.16385
+
+Processing 1 of 1 - Adding package Package_for_KB3003743~31bf3856ad364e35~amd64~~6.1.1.1
+The operation completed successfully.
+
+
+Dism.exe /image:D:/Win7.1/mount /Add-Package "/PackagePath:windows6.1-kb3004361-x64_c83d236aedb48b4e3ce93518c262b020bfac80f2.cab"
+
+Deployment Image Servicing and Management tool
+Version: 6.1.7600.16385
+
+Image Version: 6.1.7600.16385
+
+Processing 1 of 1 - Adding package Package_for_KB3004361~31bf3856ad364e35~amd64~~6.1.1.0
+The operation completed successfully.
+
+
+Dism.exe /image:D:/Win7.1/mount /Add-Package "/PackagePath:windows6.1-kb3004375-v3-x64_106d506f0b146279985ca204a0abf70423e00c68.cab"
+
+Deployment Image Servicing and Management tool
+Version: 6.1.7600.16385
+
+Image Version: 6.1.7600.16385
+
+Processing 1 of 1 - Adding package Package_for_KB3004375~31bf3856ad364e35~amd64~~6.1.3.1
+The operation completed successfully.
+
+
+Dism.exe /image:D:/Win7.1/mount /Add-Package "/PackagePath:windows6.1-kb3005607-x64_cd3779850521fa10a0a8b72890aad4840af70dd3.cab"
+
+Deployment Image Servicing and Management tool
+Version: 6.1.7600.16385
+
+Image Version: 6.1.7600.16385
+
+Processing 1 of 1 - Adding package Package_for_KB3005607~31bf3856ad364e35~amd64~~6.1.1.0
+The operation completed successfully.
+
+
+Dism.exe /image:D:/Win7.1/mount /Add-Package "/PackagePath:windows6.1-kb3006226-x64_594ee035966fa5cf51188f04451d65ddf3d1a99a.cab"
+
+Deployment Image Servicing and Management tool
+Version: 6.1.7600.16385
+
+Image Version: 6.1.7600.16385
+
+Processing 1 of 1 - Adding package Package_for_KB3006226~31bf3856ad364e35~amd64~~6.1.1.4
+The operation completed successfully.
+
+
+Dism.exe /image:D:/Win7.1/mount /Add-Package "/PackagePath:windows6.1-kb3010788-x64_06586fff9ec20db81a737282e2bced24e52fdaca.cab"
+
+Deployment Image Servicing and Management tool
+Version: 6.1.7600.16385
+
+Image Version: 6.1.7600.16385
+
+Processing 1 of 1 - Adding package Package_for_KB3010788~31bf3856ad364e35~amd64~~6.1.1.1
+The operation completed successfully.
+
+
+Dism.exe /image:D:/Win7.1/mount /Add-Package "/PackagePath:windows6.1-kb3011780-x64_d9ad4ad4f9c4dfcc785b4a7420a3b56c9f86689b.cab"
+
+Deployment Image Servicing and Management tool
+Version: 6.1.7600.16385
+
+Image Version: 6.1.7600.16385
+
+Processing 1 of 1 - Adding package Package_for_KB3011780~31bf3856ad364e35~amd64~~6.1.1.5
+The operation completed successfully.
+
+
+Dism.exe /image:D:/Win7.1/mount /Add-Package "/PackagePath:windows6.1-kb3014029-x64_6bc7aad152af72325de5d690e97a55b321a315fe.cab"
+
+Deployment Image Servicing and Management tool
+Version: 6.1.7600.16385
+
+Image Version: 6.1.7600.16385
+
+Processing 1 of 1 - Adding package Package_for_KB3014029~31bf3856ad364e35~amd64~~6.1.1.2
+The operation completed successfully.
+
+
+Dism.exe /image:D:/Win7.1/mount /Add-Package "/PackagePath:windows6.1-kb3018238-x64_e044f3e0e6f4ccfccadaaa8294f9472f15d4db9a.cab"
+
+Deployment Image Servicing and Management tool
+Version: 6.1.7600.16385
+
+Image Version: 6.1.7600.16385
+
+Processing 1 of 1 - Adding package Package_for_KB3018238~31bf3856ad364e35~amd64~~6.1.1.2
+The operation completed successfully.
+
+
+Dism.exe /image:D:/Win7.1/mount /Add-Package "/PackagePath:windows6.1-kb3019215-x64_6a00c2abcd380817a951435a57b976354c54c774.cab"
+
+Deployment Image Servicing and Management tool
+Version: 6.1.7600.16385
+
+Image Version: 6.1.7600.16385
+
+Processing 1 of 1 - Adding package Package_for_KB3019215~31bf3856ad364e35~amd64~~6.1.1.1
+The operation completed successfully.
+
+
+Dism.exe /image:D:/Win7.1/mount /Add-Package "/PackagePath:windows6.1-kb3019978-x64_1f962d6fb7f85fa5ec63366a6920ee288df52d71.cab"
+
+Deployment Image Servicing and Management tool
+Version: 6.1.7600.16385
+
+Image Version: 6.1.7600.16385
+
+Processing 1 of 1 - Adding package Package_for_KB3019978~31bf3856ad364e35~amd64~~6.1.1.2
+The operation completed successfully.
+
+
+Dism.exe /image:D:/Win7.1/mount /Add-Package "/PackagePath:windows6.1-kb3020387-x64_6228bdc51ff9c97c09c51dc76b78402451657e79.cab"
+
+Deployment Image Servicing and Management tool
+Version: 6.1.7600.16385
+
+Image Version: 6.1.7600.16385
+
+Processing 1 of 1 - Adding package Package_for_KB3020387~31bf3856ad364e35~amd64~~6.1.1.2
+The operation completed successfully.
+
+
+Dism.exe /image:D:/Win7.1/mount /Add-Package "/PackagePath:windows6.1-kb3020388-x64_9d180f206cbce774beb7459e9d73aecb0c36be32.cab"
+
+Deployment Image Servicing and Management tool
+Version: 6.1.7600.16385
+
+Image Version: 6.1.7600.16385
+
+Processing 1 of 1 - Adding package Package_for_KB3020388~31bf3856ad364e35~amd64~~6.1.1.1
+The operation completed successfully.
+
+
+Dism.exe /image:D:/Win7.1/mount /Add-Package "/PackagePath:windows6.1-kb3020393-x64_b0fdd468feae602419e332a14984b3ec3256399d.cab"
+
+Deployment Image Servicing and Management tool
+Version: 6.1.7600.16385
+
+Image Version: 6.1.7600.16385
+
+Processing 1 of 1 - Adding package Package_for_KB3020393~31bf3856ad364e35~amd64~~6.1.1.2
+The operation completed successfully.
+
+
+Dism.exe /image:D:/Win7.1/mount /Add-Package "/PackagePath:windows6.1-kb3021674-x64_e9ce515d19c6f1d5afdb935928afc7d4ef019f94.cab"
+
+Deployment Image Servicing and Management tool
+Version: 6.1.7600.16385
+
+Image Version: 6.1.7600.16385
+
+Processing 1 of 1 - Adding package Package_for_KB3021674~31bf3856ad364e35~amd64~~6.1.1.2
+The operation completed successfully.
+
+
+Dism.exe /image:D:/Win7.1/mount /Add-Package "/PackagePath:windows6.1-kb3022777-x64_c2c0f0636c921ab25678cbbceb1799eeb139956c.cab"
+
+Deployment Image Servicing and Management tool
+Version: 6.1.7600.16385
+
+Image Version: 6.1.7600.16385
+
+Processing 1 of 1 - Adding package Package_for_KB3022777~31bf3856ad364e35~amd64~~6.1.1.0
+The operation completed successfully.
+
+
+Dism.exe /image:D:/Win7.1/mount /Add-Package "/PackagePath:windows6.1-kb3023215-x64_cb531441d659f68d1b0361d97273973d010cf3da.cab"
+
+Deployment Image Servicing and Management tool
+Version: 6.1.7600.16385
+
+Image Version: 6.1.7600.16385
+
+Processing 1 of 1 - Adding package Package_for_KB3023215~31bf3856ad364e35~amd64~~6.1.1.0
+The operation completed successfully.
+
+
+Dism.exe /image:D:/Win7.1/mount /Add-Package "/PackagePath:windows6.1-kb3030377-x64_2e9e49b05199075820b8f596583557976f57810d.cab"
+
+Deployment Image Servicing and Management tool
+Version: 6.1.7600.16385
+
+Image Version: 6.1.7600.16385
+
+Processing 1 of 1 - Adding package Package_for_KB3030377~31bf3856ad364e35~amd64~~6.1.1.2
+The operation completed successfully.
+
+
+Dism.exe /image:D:/Win7.1/mount /Add-Package "/PackagePath:windows6.1-kb3031432-x64_b946b1120f6a63e5a0614047d1c7308ef0743739.cab"
+
+Deployment Image Servicing and Management tool
+Version: 6.1.7600.16385
+
+Image Version: 6.1.7600.16385
+
+Processing 1 of 1 - Adding package Package_for_KB3031432~31bf3856ad364e35~amd64~~6.1.1.0
+The operation completed successfully.
+
+
+Dism.exe /image:D:/Win7.1/mount /Add-Package "/PackagePath:windows6.1-kb3032655-x64_7149b1f0ebb72b46d7fd8a9b0bc673284e9aad55.cab"
+
+Deployment Image Servicing and Management tool
+Version: 6.1.7600.16385
+
+Image Version: 6.1.7600.16385
+
+Processing 1 of 1 - Adding package Package_for_KB3032655~31bf3856ad364e35~amd64~~6.1.1.0
+The operation completed successfully.
+
+
+Dism.exe /image:D:/Win7.1/mount /Add-Package "/PackagePath:windows6.1-kb3033889-x64_a5ec350caf9b42cd67a4be8c0d0c4e3923054507.cab"
+
+Deployment Image Servicing and Management tool
+Version: 6.1.7600.16385
+
+Image Version: 6.1.7600.16385
+
+Processing 1 of 1 - Adding package Package_for_KB3033889~31bf3856ad364e35~amd64~~6.1.1.0
+The operation completed successfully.
+
+
+Dism.exe /image:D:/Win7.1/mount /Add-Package "/PackagePath:windows6.1-kb3033890-x64_7b96073eb8b9e505d5f434807d9b18da31e50754.cab"
+
+Deployment Image Servicing and Management tool
+Version: 6.1.7600.16385
+
+Image Version: 6.1.7600.16385
+
+Processing 1 of 1 - Adding package Package_for_KB3033890~31bf3856ad364e35~amd64~~6.1.1.0
+The operation completed successfully.
+
+
+Dism.exe /image:D:/Win7.1/mount /Add-Package "/PackagePath:windows6.1-kb3033929-x64_5b2988b4619138769d347e12aec350c2cf4db4cd.cab"
+
+Deployment Image Servicing and Management tool
+Version: 6.1.7600.16385
+
+Image Version: 6.1.7600.16385
+
+Processing 1 of 1 - Adding package Package_for_KB3033929~31bf3856ad364e35~amd64~~6.1.1.1
+The operation completed successfully.
+
+
+Dism.exe /image:D:/Win7.1/mount /Add-Package "/PackagePath:windows6.1-kb3035126-x64_adbc52e8abd005e2e8b9e02325cfe45717a2b0ee.cab"
+
+Deployment Image Servicing and Management tool
+Version: 6.1.7600.16385
+
+Image Version: 6.1.7600.16385
+
+Processing 1 of 1 - Adding package Package_for_KB3035126~31bf3856ad364e35~amd64~~6.1.1.2
+The operation completed successfully.
+
+
+Dism.exe /image:D:/Win7.1/mount /Add-Package "/PackagePath:windows6.1-kb3035132-x64_1e8434e60c29f94d18859908a227c3be67fb60c1.cab"
+
+Deployment Image Servicing and Management tool
+Version: 6.1.7600.16385
+
+Image Version: 6.1.7600.16385
+
+Processing 1 of 1 - Adding package Package_for_KB3035132~31bf3856ad364e35~amd64~~6.1.1.0
+The operation completed successfully.
+
+
+Dism.exe /image:D:/Win7.1/mount /Add-Package "/PackagePath:windows6.1-kb3037574-x64_209193945d1d6c17790e32cda1f6eab01ec8d916.cab"
+
+Deployment Image Servicing and Management tool
+Version: 6.1.7600.16385
+
+Image Version: 6.1.7600.16385
+
+Processing 1 of 1 - Adding package Package_for_KB3037574~31bf3856ad364e35~amd64~~6.1.1.0
+The operation completed successfully.
+
+
+Dism.exe /image:D:/Win7.1/mount /Add-Package "/PackagePath:windows6.1-kb3042058-x64_7be364251bd1ff06ba872bb50a53d738942e0af7.cab"
+
+Deployment Image Servicing and Management tool
+Version: 6.1.7600.16385
+
+Image Version: 6.1.7600.16385
+
+Processing 1 of 1 - Adding package Package_for_KB3042058~31bf3856ad364e35~amd64~~6.1.1.1
+An error occurred - Package_for_KB3042058 Error: 0x800736b5
+
+Error: 14005
+
+The manifest file contains one or more syntax errors.
+
+The DISM log file can be found at C:\windows\Logs\DISM\dism.log
+
+
+Dism.exe /image:D:/Win7.1/mount /Add-Package "/PackagePath:windows6.1-kb3042553-x64_aa703ce9f057d53bb4151111caca1e1357475eea.cab"
+
+Deployment Image Servicing and Management tool
+Version: 6.1.7600.16385
+
+Image Version: 6.1.7600.16385
+
+Processing 1 of 1 - Adding package Package_for_KB3042553~31bf3856ad364e35~amd64~~6.1.1.1
+The operation completed successfully.
+
+
+Dism.exe /image:D:/Win7.1/mount /Add-Package "/PackagePath:windows6.1-kb3045685-x64_be36c6413bf04e7bd520c0f2b0927309c02a6613.cab"
+
+Deployment Image Servicing and Management tool
+Version: 6.1.7600.16385
+
+Image Version: 6.1.7600.16385
+
+Processing 1 of 1 - Adding package Package_for_KB3045685~31bf3856ad364e35~amd64~~6.1.1.0
+The operation completed successfully.
+
+
+Dism.exe /image:D:/Win7.1/mount /Add-Package "/PackagePath:windows6.1-kb3046017-x64_fbf99e261fdfef137b62c12b820d1954558e901b.cab"
+
+Deployment Image Servicing and Management tool
+Version: 6.1.7600.16385
+
+Image Version: 6.1.7600.16385
+
+Processing 1 of 1 - Adding package Package_for_KB3046017~31bf3856ad364e35~amd64~~6.1.1.1
+The operation completed successfully.
+
+
+Dism.exe /image:D:/Win7.1/mount /Add-Package "/PackagePath:windows6.1-kb3046269-x64_a26f42ec6c4508c07f4a037987df9e2beb7e8d2d.cab"
+
+Deployment Image Servicing and Management tool
+Version: 6.1.7600.16385
+
+Image Version: 6.1.7600.16385
+
+Processing 1 of 1 - Adding package Package_for_KB3046269~31bf3856ad364e35~amd64~~6.1.1.0
+The operation completed successfully.
+
+
+Dism.exe /image:D:/Win7.1/mount /Add-Package "/PackagePath:windows6.1-kb3046339-x64_d1e5906323763fc2ee2159ad6d1858f55277f8ab.cab"
+
+Deployment Image Servicing and Management tool
+Version: 6.1.7600.16385
+
+Image Version: 6.1.7600.16385
+
+Processing 1 of 1 - Adding package Package_for_KB3046339~31bf3856ad364e35~amd64~~6.1.1.0
+
+Error: 0x800f081e
+
+The specified package is not applicable to this image.
+
+The DISM log file can be found at C:\windows\Logs\DISM\dism.log
+
+
+Dism.exe /image:D:/Win7.1/mount /Add-Package "/PackagePath:windows6.1-kb3055642-x64_155450b09c5340c3888eaa76486779056455deaf.cab"
+
+Deployment Image Servicing and Management tool
+Version: 6.1.7600.16385
+
+Image Version: 6.1.7600.16385
+
+Processing 1 of 1 - Adding package Package_for_KB3055642~31bf3856ad364e35~amd64~~6.1.1.0
+The operation completed successfully.
+
+
+Dism.exe /image:D:/Win7.1/mount /Add-Package "/PackagePath:windows6.1-kb3059317-x64_a3f8a951de3b5770cbcfd6377e574027fe3b053f.cab"
+
+Deployment Image Servicing and Management tool
+Version: 6.1.7600.16385
+
+Image Version: 6.1.7600.16385
+
+Processing 1 of 1 - Adding package Package_for_KB3059317~31bf3856ad364e35~amd64~~6.1.1.0
+The operation completed successfully.
+
+
+Dism.exe /image:D:/Win7.1/mount /Add-Package "/PackagePath:windows6.1-kb3060716-x64_16354b97a4936a25a535765ed573444bce966606.cab"
+
+Deployment Image Servicing and Management tool
+Version: 6.1.7600.16385
+
+Image Version: 6.1.7600.16385
+
+Processing 1 of 1 - Adding package Package_for_KB3060716~31bf3856ad364e35~amd64~~6.1.1.0
+The operation completed successfully.
+
+
+Dism.exe /image:D:/Win7.1/mount /Add-Package "/PackagePath:windows6.1-kb3061518-x64_82d0349698f383a84ae6a1476023200ecbb71a23.cab"
+
+Deployment Image Servicing and Management tool
+Version: 6.1.7600.16385
+
+Image Version: 6.1.7600.16385
+
+Processing 1 of 1 - Adding package Package_for_KB3061518~31bf3856ad364e35~amd64~~6.1.1.0
+The operation completed successfully.
+
+
+Dism.exe /image:D:/Win7.1/mount /Add-Package "/PackagePath:windows6.1-kb3062577-x64_5f0aa3b50babc8ff66d05016b00dceded2a2fc73.cab"
+
+Deployment Image Servicing and Management tool
+Version: 6.1.7600.16385
+
+Image Version: 6.1.7600.16385
+
+Processing 1 of 1 - Adding package Package_for_KB3062577~31bf3856ad364e35~amd64~~6.1.1.0
+
+Error: 0x800f081e
+
+The specified package is not applicable to this image.
+
+The DISM log file can be found at C:\windows\Logs\DISM\dism.log
+
+
+Dism.exe /image:D:/Win7.1/mount /Add-Package "/PackagePath:windows6.1-kb3067903-x64_48636a2b2aed1027c30ccbbe17e89863c6377370.cab"
+
+Deployment Image Servicing and Management tool
+Version: 6.1.7600.16385
+
+Image Version: 6.1.7600.16385
+
+Processing 1 of 1 - Adding package Package_for_KB3067903~31bf3856ad364e35~amd64~~6.1.1.0
+The operation completed successfully.
+
+
+Dism.exe /image:D:/Win7.1/mount /Add-Package "/PackagePath:windows6.1-kb3067904-x64_e1eaa895232ebec13e92e03cd6cd42c536b5a501.cab"
+
+Deployment Image Servicing and Management tool
+Version: 6.1.7600.16385
+
+Image Version: 6.1.7600.16385
+
+Processing 1 of 1 - Adding package Package_for_KB3067904~31bf3856ad364e35~amd64~~6.1.1.2
+The operation completed successfully.
+
+
+Dism.exe /image:D:/Win7.1/mount /Add-Package "/PackagePath:windows6.1-kb3068457-x64_aa50a6699a6d0879ee128e9ebd13da7e02cfe01f.cab"
+
+Deployment Image Servicing and Management tool
+Version: 6.1.7600.16385
+
+Image Version: 6.1.7600.16385
+
+Processing 1 of 1 - Adding package Package_for_KB3068457~31bf3856ad364e35~amd64~~6.1.1.0
+The operation completed successfully.
+
+
+Dism.exe /image:D:/Win7.1/mount /Add-Package "/PackagePath:windows6.1-kb3069392-x64_62580bbfc99022b611f67f95f8c6bdfbbb373c02.cab"
+
+Deployment Image Servicing and Management tool
+Version: 6.1.7600.16385
+
+Image Version: 6.1.7600.16385
+
+Processing 1 of 1 - Adding package Package_for_KB3069392~31bf3856ad364e35~amd64~~6.1.1.1
+The operation completed successfully.
+
+
+Dism.exe /image:D:/Win7.1/mount /Add-Package "/PackagePath:windows6.1-kb3069762-x64_4ed0176685f7d1880c6ea76fab837842a128deab.cab"
+
+Deployment Image Servicing and Management tool
+Version: 6.1.7600.16385
+
+Image Version: 6.1.7600.16385
+
+Processing 1 of 1 - Adding package Package_for_KB3069762~31bf3856ad364e35~amd64~~6.1.1.0
+The operation completed successfully.
+
+
+Dism.exe /image:D:/Win7.1/mount /Add-Package "/PackagePath:windows6.1-kb3071756-x64_d1a0aafb1a16a7cd86fa22455839805305caaa80.cab"
+
+Deployment Image Servicing and Management tool
+Version: 6.1.7600.16385
+
+Image Version: 6.1.7600.16385
+
+Processing 1 of 1 - Adding package Package_for_KB3071756~31bf3856ad364e35~amd64~~6.1.1.2
+The operation completed successfully.
+
+
+Dism.exe /image:D:/Win7.1/mount /Add-Package "/PackagePath:windows6.1-kb3072595-x64_1be9a40a195ecb53869b278274c342feac15b372.cab"
+
+Deployment Image Servicing and Management tool
+Version: 6.1.7600.16385
+
+Image Version: 6.1.7600.16385
+
+Processing 1 of 1 - Adding package Package_for_KB3072595~31bf3856ad364e35~amd64~~6.1.1.2
+The operation completed successfully.
+
+
+Dism.exe /image:D:/Win7.1/mount /Add-Package "/PackagePath:windows6.1-kb3072630-x64_bab6a4d643d8e6031c1c2a0ce3391839b70b06b3.cab"
+
+Deployment Image Servicing and Management tool
+Version: 6.1.7600.16385
+
+Image Version: 6.1.7600.16385
+
+Processing 1 of 1 - Adding package Package_for_KB3072630~31bf3856ad364e35~amd64~~6.1.1.0
+The operation completed successfully.
+
+
+Dism.exe /image:D:/Win7.1/mount /Add-Package "/PackagePath:windows6.1-kb3072633-x64_e30b64e3446c4a51b77d42dc00cebb9382894f36.cab"
+
+Deployment Image Servicing and Management tool
+Version: 6.1.7600.16385
+
+Image Version: 6.1.7600.16385
+
+Processing 1 of 1 - Adding package Package_for_KB3072633~31bf3856ad364e35~amd64~~6.1.1.1
+The operation completed successfully.
+
+
+Dism.exe /image:D:/Win7.1/mount /Add-Package "/PackagePath:windows6.1-kb3074543-x64_fce267791526676d259fd7060135053564ae0d30.cab"
+
+Deployment Image Servicing and Management tool
+Version: 6.1.7600.16385
+
+Image Version: 6.1.7600.16385
+
+Processing 1 of 1 - Adding package Package_for_KB3074543~31bf3856ad364e35~amd64~~6.1.1.0
+The operation completed successfully.
+
+
+Dism.exe /image:D:/Win7.1/mount /Add-Package "/PackagePath:windows6.1-kb3075220-x64_9f192e290e17d1a064e63bd25f8ae563c908ce05.cab"
+
+Deployment Image Servicing and Management tool
+Version: 6.1.7600.16385
+
+Image Version: 6.1.7600.16385
+
+Processing 1 of 1 - Adding package Package_for_KB3075220~31bf3856ad364e35~amd64~~6.1.1.0
+The operation completed successfully.
+
+
+Dism.exe /image:D:/Win7.1/mount /Add-Package "/PackagePath:windows6.1-kb3075222-x64_f1dcdced5dbc39d732ce453a3d503b02fcf09548.cab"
+
+Deployment Image Servicing and Management tool
+Version: 6.1.7600.16385
+
+Image Version: 6.1.7600.16385
+
+Processing 1 of 1 - Adding package Package_for_KB3075222~31bf3856ad364e35~amd64~~6.1.1.1
+The operation completed successfully.
+
+
+Dism.exe /image:D:/Win7.1/mount /Add-Package "/PackagePath:windows6.1-kb3075226-x64_766c9cce189bdf1b626bcbedaf1cc767a2530cf5.cab"
+
+Deployment Image Servicing and Management tool
+Version: 6.1.7600.16385
+
+Image Version: 6.1.7600.16385
+
+Processing 1 of 1 - Adding package Package_for_KB3075226~31bf3856ad364e35~amd64~~6.1.1.1
+The operation completed successfully.
+
+
+Dism.exe /image:D:/Win7.1/mount /Add-Package "/PackagePath:windows6.1-kb3076895-x64_f768deb1befe18df15ed13501ba823a653cd4588.cab"
+
+Deployment Image Servicing and Management tool
+Version: 6.1.7600.16385
+
+Image Version: 6.1.7600.16385
+
+Processing 1 of 1 - Adding package Package_for_KB3076895~31bf3856ad364e35~amd64~~6.1.1.1
+The operation completed successfully.
+
+
+Dism.exe /image:D:/Win7.1/mount /Add-Package "/PackagePath:windows6.1-kb3076949-x64_0a58cffb033470caf3115e3719344ec6eb90c62a.cab"
+
+Deployment Image Servicing and Management tool
+Version: 6.1.7600.16385
+
+Image Version: 6.1.7600.16385
+
+Processing 1 of 1 - Adding package Package_for_KB3076949~31bf3856ad364e35~amd64~~6.1.1.0
+The operation completed successfully.
+
+
+Dism.exe /image:D:/Win7.1/mount /Add-Package "/PackagePath:windows6.1-kb3078601-x64_785cd5e3b02e0afdac45c6d7c481ba9fd7edbdfc.cab"
+
+Deployment Image Servicing and Management tool
+Version: 6.1.7600.16385
+
+Image Version: 6.1.7600.16385
+
+Processing 1 of 1 - Adding package Package_for_KB3078601~31bf3856ad364e35~amd64~~6.1.1.5
+The operation completed successfully.
+
+
+Dism.exe /image:D:/Win7.1/mount /Add-Package "/PackagePath:windows6.1-kb3080446-x64_31d447a5a3075d8ddfa1c2f07214b669c732d7cb.cab"
+
+Deployment Image Servicing and Management tool
+Version: 6.1.7600.16385
+
+Image Version: 6.1.7600.16385
+
+Processing 1 of 1 - Adding package Package_for_KB3080446~31bf3856ad364e35~amd64~~6.1.1.2
+The operation completed successfully.
+
+
+Dism.exe /image:D:/Win7.1/mount /Add-Package "/PackagePath:windows6.1-kb3081320-x64_67ef322ff31c37de5733c0a836d54160cd5ca719.cab"
+
+Deployment Image Servicing and Management tool
+Version: 6.1.7600.16385
+
+Image Version: 6.1.7600.16385
+
+Processing 1 of 1 - Adding package Package_for_KB3081320~31bf3856ad364e35~amd64~~6.1.1.2
+The operation completed successfully.
+
+
+Dism.exe /image:D:/Win7.1/mount /Add-Package "/PackagePath:windows6.1-kb3084135-x64_5cde883ae29efdfbdb5ff290dc58365c1941ff8c.cab"
+
+Deployment Image Servicing and Management tool
+Version: 6.1.7600.16385
+
+Image Version: 6.1.7600.16385
+
+Processing 1 of 1 - Adding package Package_for_KB3084135~31bf3856ad364e35~amd64~~6.1.1.0
+The operation completed successfully.
+
+
+Dism.exe /image:D:/Win7.1/mount /Add-Package "/PackagePath:windows6.1-kb3086255-x64_b7ce579bb27fb562fa8e2aa00c173c0ae0347459.cab"
+
+Deployment Image Servicing and Management tool
+Version: 6.1.7600.16385
+
+Image Version: 6.1.7600.16385
+
+Processing 1 of 1 - Adding package Package_for_KB3086255~31bf3856ad364e35~amd64~~6.1.1.0
+The operation completed successfully.
+
+
+Dism.exe /image:D:/Win7.1/mount /Add-Package "/PackagePath:windows6.1-kb3087039-x64_6543ecf25746dc015c53f26ec9a80d0024f67c9c.cab"
+
+Deployment Image Servicing and Management tool
+Version: 6.1.7600.16385
+
+Image Version: 6.1.7600.16385
+
+Processing 1 of 1 - Adding package Package_for_KB3087039~31bf3856ad364e35~amd64~~6.1.1.4
+The operation completed successfully.
+
+
+Dism.exe /image:D:/Win7.1/mount /Add-Package "/PackagePath:windows6.1-kb3092601-x64_7b499f77cb3d6250cb603bc7bba5b3fddbdfa9cd.cab"
+
+Deployment Image Servicing and Management tool
+Version: 6.1.7600.16385
+
+Image Version: 6.1.7600.16385
+
+Processing 1 of 1 - Adding package Package_for_KB3092601~31bf3856ad364e35~amd64~~6.1.1.0
+The operation completed successfully.
+
+
+Dism.exe /image:D:/Win7.1/mount /Add-Package "/PackagePath:windows6.1-kb3093513-x64_cb5a17f5a02e2a10a3c5df9230dfee929d34e2b9.cab"
+
+Deployment Image Servicing and Management tool
+Version: 6.1.7600.16385
+
+Image Version: 6.1.7600.16385
+
+Processing 1 of 1 - Adding package Package_for_KB3093513~31bf3856ad364e35~amd64~~6.1.1.0
+The operation completed successfully.
+
+
+Dism.exe /image:D:/Win7.1/mount /Add-Package "/PackagePath:windows6.1-kb3097966-x64_04fbcdb0539f1cf11ec3445a0fbfffbc7a5d1364.cab"
+
+Deployment Image Servicing and Management tool
+Version: 6.1.7600.16385
+
+Image Version: 6.1.7600.16385
+
+Processing 1 of 1 - Adding package Package_for_KB3097966~31bf3856ad364e35~amd64~~6.1.1.1
+The operation completed successfully.
+
+
+Dism.exe /image:D:/Win7.1/mount /Add-Package "/PackagePath:windows6.1-kb3097989-x64_892eaa91fcd986ed1249fceb875118bd63646266.cab"
+
+Deployment Image Servicing and Management tool
+Version: 6.1.7600.16385
+
+Image Version: 6.1.7600.16385
+
+Processing 1 of 1 - Adding package Package_for_KB3097989~31bf3856ad364e35~amd64~~6.1.1.1
+The operation completed successfully.
+
+
+Dism.exe /image:D:/Win7.1/mount /Add-Package "/PackagePath:windows6.1-kb3099862-x64_117a17ba96c45cfdd89f4ed602f48fb660dbf132.cab"
+
+Deployment Image Servicing and Management tool
+Version: 6.1.7600.16385
+
+Image Version: 6.1.7600.16385
+
+Processing 1 of 1 - Adding package Package_for_KB3099862~31bf3856ad364e35~amd64~~6.1.1.0
+The operation completed successfully.
+
+
+Dism.exe /image:D:/Win7.1/mount /Add-Package "/PackagePath:windows6.1-kb3100213-x64_195b3855c4975523a29068711eec4260d3cd6b6f.cab"
+
+Deployment Image Servicing and Management tool
+Version: 6.1.7600.16385
+
+Image Version: 6.1.7600.16385
+
+Processing 1 of 1 - Adding package Package_for_KB3100213~31bf3856ad364e35~amd64~~6.1.1.1
+The operation completed successfully.
+
+
+Dism.exe /image:D:/Win7.1/mount /Add-Package "/PackagePath:windows6.1-kb3100465-x64_1d356a73bcd03a54234a5ae60f393043149a848b.cab"
+
+Deployment Image Servicing and Management tool
+Version: 6.1.7600.16385
+
+Image Version: 6.1.7600.16385
+
+Processing 1 of 1 - Adding package Package_for_KB3100465~31bf3856ad364e35~amd64~~6.1.1.0
+
+Error: 0x800f081e
+
+The specified package is not applicable to this image.
+
+The DISM log file can be found at C:\windows\Logs\DISM\dism.log
+
+
+Dism.exe /image:D:/Win7.1/mount /Add-Package "/PackagePath:windows6.1-kb3101246-x64_35cabe5036c1669282289d5d7d57c8af1ad494e5.cab"
+
+Deployment Image Servicing and Management tool
+Version: 6.1.7600.16385
+
+Image Version: 6.1.7600.16385
+
+Processing 1 of 1 - Adding package Package_for_KB3101246~31bf3856ad364e35~amd64~~6.1.1.0
+The operation completed successfully.
+
+
+Dism.exe /image:D:/Win7.1/mount /Add-Package "/PackagePath:windows6.1-kb3101722-x64_10874934caddc13195380b064ed4c199e54ec992.cab"
+
+Deployment Image Servicing and Management tool
+Version: 6.1.7600.16385
+
+Image Version: 6.1.7600.16385
+
+Processing 1 of 1 - Adding package Package_for_KB3101722~31bf3856ad364e35~amd64~~6.1.1.0
+The operation completed successfully.
+
+
+Dism.exe /image:D:/Win7.1/mount /Add-Package "/PackagePath:windows6.1-kb3101746-x64_6e9c818598132a12eef8bf727f96fce79df53d12.cab"
+
+Deployment Image Servicing and Management tool
+Version: 6.1.7600.16385
+
+Image Version: 6.1.7600.16385
+
+Processing 1 of 1 - Adding package Package_for_KB3101746~31bf3856ad364e35~amd64~~6.1.1.1
+The operation completed successfully.
+
+
+Dism.exe /image:D:/Win7.1/mount /Add-Package "/PackagePath:Windows6.1-KB3102810-x64.msu"
+
+Deployment Image Servicing and Management tool
+Version: 6.1.7600.16385
+
+Image Version: 6.1.7600.16385
+
+Processing 1 of 1 - Adding package E:\����\CI-Tools\Install\OS\wsusoffline\client\w61-x64\glb\Windows6.1-KB3102810-x64.msu
+The operation completed successfully.
+
+
+Dism.exe /image:D:/Win7.1/mount /Add-Package "/PackagePath:ie11-windows6.1-kb3104002-x64_1b64cc7bba3ac4d112b0e7f3c7575963bf0daafe.cab"
+
+Deployment Image Servicing and Management tool
+Version: 6.1.7600.16385
+
+Image Version: 6.1.7600.16385
+
+Processing 1 of 1 - Adding package Package_for_KB3104002~31bf3856ad364e35~amd64~~11.2.1.0
+The operation completed successfully.
+
+
+Dism.exe /image:D:/Win7.1/mount /Add-Package "/PackagePath:windows6.1-kb3104002-x64_a7cc6a027a324fdcc7c88fd1b3dbbf37e3cd0a92.cab"
+
+Deployment Image Servicing and Management tool
+Version: 6.1.7600.16385
+
+Image Version: 6.1.7600.16385
+
+Processing 1 of 1 - Adding package Package_for_KB3104002~31bf3856ad364e35~amd64~~6.1.1.0
+The operation completed successfully.
+
+
+Dism.exe /image:D:/Win7.1/mount /Add-Package "/PackagePath:windows6.1-kb3105578-x64_020b88f3e3a2a09291c1b3a39a761e5243bc38f5.cab"
+
+Deployment Image Servicing and Management tool
+Version: 6.1.7600.16385
+
+Image Version: 6.1.7600.16385
+
+Processing 1 of 1 - Adding package Package_for_KB3105578~31bf3856ad364e35~amd64~~6.1.1.1
+The operation completed successfully.
+
+
+Dism.exe /image:D:/Win7.1/mount /Add-Package "/PackagePath:windows6.1-kb3108371-x64_ac793d4f97d47b7476a86500c473a3bcf1df0b6e.cab"
+
+Deployment Image Servicing and Management tool
+Version: 6.1.7600.16385
+
+Image Version: 6.1.7600.16385
+
+Processing 1 of 1 - Adding package Package_for_KB3108371~31bf3856ad364e35~amd64~~6.1.1.0
+The operation completed successfully.
+
+
+Dism.exe /image:D:/Win7.1/mount /Add-Package "/PackagePath:windows6.1-kb3108381-x64_7a72ad5641ec26c94bfc535739b4603c40a41ccd.cab"
+
+Deployment Image Servicing and Management tool
+Version: 6.1.7600.16385
+
+Image Version: 6.1.7600.16385
+
+Processing 1 of 1 - Adding package Package_for_KB3108381~31bf3856ad364e35~amd64~~6.1.1.1
+The operation completed successfully.
+
+
+Dism.exe /image:D:/Win7.1/mount /Add-Package "/PackagePath:windows6.1-kb3108604-x64_2563f710aeb9399f586c9092466a9978ab53bf3f.cab"
+
+Deployment Image Servicing and Management tool
+Version: 6.1.7600.16385
+
+Image Version: 6.1.7600.16385
+
+Processing 1 of 1 - Adding package Package_for_KB3108604~31bf3856ad364e35~amd64~~6.1.1.1
+
+Error: 0x800f081e
+
+The specified package is not applicable to this image.
+
+The DISM log file can be found at C:\windows\Logs\DISM\dism.log
+
+
+Dism.exe /image:D:/Win7.1/mount /Add-Package "/PackagePath:windows6.1-kb3108669-x64_bd56378c1022bc07562e068ea2cdb0dc2278952c.cab"
+
+Deployment Image Servicing and Management tool
+Version: 6.1.7600.16385
+
+Image Version: 6.1.7600.16385
+
+Processing 1 of 1 - Adding package Package_for_KB3108669~31bf3856ad364e35~amd64~~6.1.1.1
+
+Error: 0x800f081e
+
+The specified package is not applicable to this image.
+
+The DISM log file can be found at C:\windows\Logs\DISM\dism.log
+
+
+Dism.exe /image:D:/Win7.1/mount /Add-Package "/PackagePath:windows6.1-kb3108669-x64_5bdda3c17aec5d2e966c5400c3a4e3481665be52.cab"
+
+Deployment Image Servicing and Management tool
+Version: 6.1.7600.16385
+
+Image Version: 6.1.7600.16385
+
+Processing 1 of 1 - Adding package Package_for_KB3108669~31bf3856ad364e35~amd64~~6.1.1.0
+The operation completed successfully.
+
+
+Dism.exe /image:D:/Win7.1/mount /Add-Package "/PackagePath:windows6.1-kb3108670-x64_7e989b81bdf6647dfbbdf7ced6417b6aca19f342.cab"
+
+Deployment Image Servicing and Management tool
+Version: 6.1.7600.16385
+
+Image Version: 6.1.7600.16385
+
+Processing 1 of 1 - Adding package Package_for_KB3108670~31bf3856ad364e35~amd64~~6.1.1.0
+The operation completed successfully.
+
+
+Dism.exe /image:D:/Win7.1/mount /Add-Package "/PackagePath:windows6.1-kb3109094-x64_570b08f22988118cfa06a014be2a7b66ab493802.cab"
+
+Deployment Image Servicing and Management tool
+Version: 6.1.7600.16385
+
+Image Version: 6.1.7600.16385
+
+Processing 1 of 1 - Adding package Package_for_KB3109094~31bf3856ad364e35~amd64~~6.1.1.1
+The operation completed successfully.
+
+
+Dism.exe /image:D:/Win7.1/mount /Add-Package "/PackagePath:windows6.1-kb3109103-x64_a3c8699843b2d343c41c8a130476200df48d4e7f.cab"
+
+Deployment Image Servicing and Management tool
+Version: 6.1.7600.16385
+
+Image Version: 6.1.7600.16385
+
+Processing 1 of 1 - Adding package Package_for_KB3109103~31bf3856ad364e35~amd64~~6.1.1.0
+The operation completed successfully.
+
+
+Dism.exe /Unmount-Wim /MountDir:D:/Win7.1/mount /commit
+
+Deployment Image Servicing and Management tool
+Version: 6.1.7600.16385
+
+Image File : D:\Win7.1\install.wim
+Image Index : 4
+Saving image
+Unmounting image
+The operation completed successfully.
 `
 
 const reg = /Processing[^\r\n]*((kb|KB)[0-9]+)([^\r\n]*\n)?([^\r\n]*\n)?([^\r\n]*\n)?([^\r\n]*\n)?Error:/gmi

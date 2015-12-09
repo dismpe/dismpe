@@ -19,7 +19,7 @@ describe('index#getWsusPackagePaths', function(){
   it('Should return the correct package list', function*(){
     this.timeout(10000);
     const packageList = yield getWsusPackagePaths(options);
-    expect(packageList.length).to.equal(188);
+    expect(packageList.length).to.equal(192);
   })
   let getNotFiltered = (ids, packageList)=>{
     let notFiltered = [];
