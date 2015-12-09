@@ -214,6 +214,8 @@ let start = (options)=>{
         yield process.exec(`Dism.exe /Unmount-Wim /discard /MountDir:${options.mountDir}`, defaultOption);
         fs.removeSync(mountPath);
         if (fs.existsSync(wimFilepath)) {
+          //TODO: use mtime is not accurate , cause fs.chmodSync
+          // would change mtime
           let mtimeA = fs.statSync(wimFilepath).mtime;
           let mtimeB = fs.statSync(installWinPath).mtime;
           if (mtimeA.getTime() != mtimeB.getTime()){
@@ -228,7 +230,9 @@ let start = (options)=>{
       fs.mkdirsSync(mountPath);
       if (!fs.existsSync(wimFilepath)){
         fs.copySync(installWinPath, wimFilepath);
+        let stat = fs.statSync(wimFilepath);
         fs.chmodSync(wimFilepath, 666)
+        fs.utimesSync(wimFilepath, stat.atime, stat.mtime);
       }
       yield process.exec(`Dism.exe /Mount-Wim /WimFile:${wimFilepath} /Index:4 /MountDir:${options.mountDir}`, defaultOption);
     }
