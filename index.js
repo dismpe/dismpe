@@ -53,7 +53,8 @@ let cloneOption= (option) => {
 }
 
 let extractFile = (file, defaultOption) => {
-  file.extractPath = path.join(path.dirname(file.targetPath), file.id  +  '.x');
+  let targetPath = path.dirname(path.dirname(file.targetPath))
+  file.extractPath = path.join(targetPath, file.id  +  '.x');
   fs.removeSync(file.extractPath);
   return process.exec(`"${file.targetPath}" -x:${file.extractPath} -q`, defaultOption)
 }
@@ -74,7 +75,7 @@ let dsimNormalUpdates = function*(wsusClient, defaultOption, options){
     let kbPart = 'kb0000000'
     for (let part of filenameParts) {
       part = part.toLowerCase();
-      if (part.length === 'kb2518295'.length && part.startsWith('kb')) {
+      if (part.length === kbPart.length && part.startsWith('kb')) {
         kbPart = part;
         break;
       }
@@ -146,9 +147,9 @@ let dsimNormalUpdates = function*(wsusClient, defaultOption, options){
       id: id.toString(),
       targetPath: path.join(WindowsUpdateAgentFile.extractPath, 'WUA-Win7SP1.exe')
     }
-    WindowsUpdateAgentFile.extractPath = wuaWin7Sp1File.extractPath;
 
     yield extractFile(wuaWin7Sp1File, defaultOption);
+    WindowsUpdateAgentFile.extractPath = wuaWin7Sp1File.extractPath;
 
     yield extractFile(ieFile, defaultOption);
     ieFile.kbPart = 'kb2841134';
@@ -172,7 +173,7 @@ let dsimNormalUpdates = function*(wsusClient, defaultOption, options){
       if (file.pathKey === 'ie') { // There are other languages need to be excluded
         if (file.packagePaths) {
           Array.prototype.push.apply(packagePaths, file.packagePaths);
-        } else  if (file.extractPath) {
+        } else if (file.extractPath) {
           packagePaths.push(file.extractPath);
         }
       } else {
