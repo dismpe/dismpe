@@ -152,7 +152,6 @@ let dsimNormalUpdates = function*(wsusClient, defaultOption, options){
     });
 
     let packagePaths = [wuaWin7Sp1File.extractPath]
-    packagePaths = []
     for (let file of files) {
       if (file.pathKey === 'ie') { // There are other languages need to be excluded
         if (file.packagePaths) {
@@ -161,11 +160,10 @@ let dsimNormalUpdates = function*(wsusClient, defaultOption, options){
         if (file.extractPath) {
         }
       } else {
-        //packagePaths.push(file.targetPath)
+        packagePaths.push(file.targetPath)
       }
     }
 
-    //packagePaths = [packagePaths[0]];
     console.log(packagePaths);
     for (let packagePath of packagePaths) {
       let packageOption = cloneOption(defaultOption)
@@ -226,6 +224,7 @@ let start = (options)=>{
       fs.mkdirsSync(mountPath);
       if (!fs.existsSync(wimFilepath)){
         fs.copySync(installWinPath, wimFilepath);
+        fs.chmodSync(wimFilepath, 666)
       }
       yield process.exec(`Dism.exe /Mount-Wim /WimFile:${wimFilepath} /Index:4 /MountDir:${options.mountDir}`, defaultOption);
     }
