@@ -50,20 +50,19 @@ describe('dsimpe#', function(){
 
   it('getWHDownloaderPackagePaths', function(){
     let ret = getWHDownloaderPackagePaths(options)
-    expect(ret).to.eql([
-      'WHDownloader\\Updates\\Windows7-x64\\General',
-      'WHDownloader\\Updates\\Windows7-x64\\Security',
-      'WHDownloader\\Updates\\Windows7-x64\\Hotfix',
-      'WHDownloader\\Updates\\Windows7-x64\\Additional\\_IE11',
-      'WHDownloader\\Updates\\Windows7-x64\\Additional\\_IE11\\Updates',
-      [ 'WHDownloader\\Updates\\Windows7-x64\\Additional\\Features\\IIS',
+    expect(ret).to.eql([ 'WHDownloader\\Updates\\Windows7-x64\\General',
+        'WHDownloader\\Updates\\Windows7-x64\\Security',
+        'WHDownloader\\Updates\\Windows7-x64\\Hotfix',
+        'WHDownloader\\Updates\\Windows7-x64\\Additional\\_IE11',
+        'WHDownloader\\Updates\\Windows7-x64\\Additional\\_IE11\\Updates',
+        'WHDownloader\\Updates\\Windows7-x64\\Additional\\Features\\IIS',
         'WHDownloader\\Updates\\Windows7-x64\\Additional\\Features\\LPRPortMonitor',
         'WHDownloader\\Updates\\Windows7-x64\\Additional\\Features\\MSMQ',
         'WHDownloader\\Updates\\Windows7-x64\\Additional\\Features\\NFS',
         'WHDownloader\\Updates\\Windows7-x64\\Additional\\Features\\SNMP',
         'WHDownloader\\Updates\\Windows7-x64\\Additional\\Features\\SUA',
-        'WHDownloader\\Updates\\Windows7-x64\\Additional\\Features\\TelnetServer' ],
-      [ 'WHDownloader\\Updates\\Windows7-x64\\Additional\\RDP\\Windows6.1-KB2574819-v2-x64.msu',
+        'WHDownloader\\Updates\\Windows7-x64\\Additional\\Features\\TelnetServer',
+        'WHDownloader\\Updates\\Windows7-x64\\Additional\\RDP\\Windows6.1-KB2574819-v2-x64.msu',
         'WHDownloader\\Updates\\Windows7-x64\\Additional\\RDP\\Windows6.1-KB2592687-x64.msu',
         'WHDownloader\\Updates\\Windows7-x64\\Additional\\RDP\\Windows6.1-KB2830477-x64.msu',
         'WHDownloader\\Updates\\Windows7-x64\\Additional\\RDP\\Windows6.1-KB2923545-x64.msu',
@@ -72,12 +71,12 @@ describe('dsimpe#', function(){
         'WHDownloader\\Updates\\Windows7-x64\\Additional\\RDP\\Windows6.1-KB3020387-x64.msu',
         'WHDownloader\\Updates\\Windows7-x64\\Additional\\RDP\\Windows6.1-KB3020388-x64.msu',
         'WHDownloader\\Updates\\Windows7-x64\\Additional\\RDP\\Windows6.1-KB3024260-x64.msu',
-        'WHDownloader\\Updates\\Windows7-x64\\Additional\\RDP\\Windows6.1-KB3069762-x64.msu' ],
-      'WHDownloader\\Updates\\Windows7-x64\\Additional\\WAT',
-      'WHDownloader\\Updates\\Windows7-x64\\Extra\\MediaFeaturePack',
-      'WHDownloader\\Updates\\Windows7-x64\\Extra\\MediaFormatFeaturePack',
-      'WHDownloader\\Updates\\Windows7-x64\\Extra\\RSAT',
-      'WHDownloader\\Updates\\Windows7-x64\\Extra\\RSAT\\WMS',
-      'WHDownloader\\Updates\\Windows7-x64\\Extra\\RSAT\\Updates' ]);
+        'WHDownloader\\Updates\\Windows7-x64\\Additional\\RDP\\Windows6.1-KB3069762-x64.msu',
+        'WHDownloader\\Updates\\Windows7-x64\\Additional\\WAT',
+        'WHDownloader\\Updates\\Windows7-x64\\Extra\\MediaFeaturePack',
+        'WHDownloader\\Updates\\Windows7-x64\\Extra\\MediaFormatFeaturePack',
+        'WHDownloader\\Updates\\Windows7-x64\\Extra\\RSAT',
+        'WHDownloader\\Updates\\Windows7-x64\\Extra\\RSAT\\WMS',
+        'WHDownloader\\Updates\\Windows7-x64\\Extra\\RSAT\\Updates' ]);
   });
 })

@@ -148,7 +148,7 @@ exports.getWHDownloaderPackagePaths = function(options){
   let rsatPath = path.join(updatePath, 'Extra', 'RSAT');
   let rsatWmsPath = path.join(updatePath, 'Extra', 'RSAT', 'WMS');
   let rsatUpdatesPath = path.join(updatePath, 'Extra', 'RSAT', 'Updates');
-  return [
+  let paths = [
     GeneralPath,
     SecurityPath,
     HotfixPath,
@@ -163,6 +163,15 @@ exports.getWHDownloaderPackagePaths = function(options){
     rsatWmsPath,
     rsatUpdatesPath,
   ];
+  let result = [];
+  for (let p of paths) {
+    if (Array.isArray(p)){
+      Array.prototype.push.apply(result, p);
+    } else {
+      result.push(p);
+    }
+  }
+  return result;
 
   `
   :: Extra updates
@@ -372,7 +381,12 @@ exports.start = (options)=>{
     }
 
     if (options.addPackage) {
-      let packagePaths = yield* exports.getWsusPackagePaths(options, defaultOption);
+      let packagePaths = [];
+      if (options.udpateType === 'WHDownloader') {
+        let whdPackagePaths = exports.getWHDownloaderPackagePaths(options);
+      } if (options.udpateType === 'wsusoffline') {
+        packagePaths = yield* exports.getWsusPackagePaths(options, defaultOption);
+      }
       console.log(packagePaths);
       for (let packagePath of packagePaths) {
         yield process.exec(`Dism.exe /image:${options.mountDir} /Add-Package "/PackagePath:${packagePath}"`, defaultOption)

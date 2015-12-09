@@ -12,5 +12,6 @@ let options = {
   addPackage: false,
   commit: false,
   ieLang: 'en-us',
+  udpateType:' WHDownloader', //[WHDownloader|wsusoffline]
 }
 start(options);
